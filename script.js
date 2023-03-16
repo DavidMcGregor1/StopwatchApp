@@ -1,10 +1,12 @@
 const timeElement = document.querySelector(".watch .time");
-const startButton = document.querySelector("start");
-const stopButton = document.querySelector("stop");
-const resetButton = document.querySelector("reset");
+const startButton = document.getElementById("start");
+const stopButton = document.getElementById("stop");
+const resetButton = document.getElementById("reset");
 
-let seconds = 888;
+let seconds = 0;
 let interval = null;
+
+startButton.addEventListener("click", start);
 
 function timer() {
   seconds++;
@@ -29,3 +31,11 @@ function timer() {
 }
 
 timer();
+
+function start() {
+  if (interval) {
+    return;
+  }
+
+  interval = setInterval(timer, 1000);
+}
