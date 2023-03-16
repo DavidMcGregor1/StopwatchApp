@@ -13,6 +13,18 @@ function timer() {
   let mins = Math.floor((seconds - hours * 3600) / 60);
   let secs = seconds % 60;
 
+  if (secs < 10) {
+    secs = "0" + secs;
+  }
+
+  if (mins < 10) {
+    mins = "0" + mins;
+  }
+
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+
   timeElement.innerText = `${hours}:${mins}:${secs}`;
 }
 
