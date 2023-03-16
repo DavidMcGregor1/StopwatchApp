@@ -7,6 +7,8 @@ let seconds = 0;
 let interval = null;
 
 startButton.addEventListener("click", start);
+stopButton.addEventListener("click", stop);
+resetButton.addEventListener("click", reset);
 
 function timer() {
   seconds++;
@@ -30,12 +32,21 @@ function timer() {
   timeElement.innerText = `${hours}:${mins}:${secs}`;
 }
 
-timer();
-
 function start() {
   if (interval) {
     return;
   }
 
   interval = setInterval(timer, 1000);
+}
+
+function stop() {
+  clearInterval(interval);
+  interval = null;
+}
+
+function reset() {
+  stop();
+  seconds = 0;
+  timeElement.innerText = "00:00:00";
 }
