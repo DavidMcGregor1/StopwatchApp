@@ -20,7 +20,7 @@ body {
     text-align: center;
     background-color: var(--darker);
     width: 100%;
-    max-width: 360px;
+    max-width: 660px;
     margin: 4rem auto;
     padding: 1rem 2rem;
     border-radius: 1rem;
@@ -62,4 +62,20 @@ button:hover {
 button:active {
     background-color: var(--dark);
 }
+
+@media screen and (max-width: 1500px) {
+  
+  
+    .watch {
+        text-align: center;
+        background-color: var(--darker);
+        width: 100%;
+        max-width: 360px;
+        margin: 4rem auto;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+    }
+
+  
+  }
 
