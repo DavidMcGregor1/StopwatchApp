@@ -16,6 +16,7 @@ function timer() {
   let hours = Math.floor(seconds / 3600);
   let mins = Math.floor((seconds - hours * 3600) / 60);
   let secs = seconds % 60;
+  let milisecs = seconds * 1000;
 
   if (secs < 10) {
     secs = "0" + secs;
@@ -29,7 +30,7 @@ function timer() {
     hours = "0" + hours;
   }
 
-  timeElement.innerText = `${hours}:${mins}:${secs}`;
+  timeElement.innerText = `${hours}:${mins}:${secs}:${milisecs}`;
 }
 
 function start() {
