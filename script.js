@@ -49,5 +49,5 @@ function stop() {
 function reset() {
   stop();
   seconds = 0;
-  timeElement.innerText = "00:00:00";
+  timeElement.innerText = "00:00:000";
 }
